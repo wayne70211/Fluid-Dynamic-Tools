@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address.view.AboutControl">
+   <children>
+      <Label layoutX="53.0" layoutY="208.0" prefHeight="17.0" prefWidth="195.0" styleClass="label-bright" text="Program By Wang Chin-Wei" AnchorPane.bottomAnchor="110.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Button defaultButton="true" layoutX="121.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleOK" prefHeight="16.0" prefWidth="96.0" text="OK" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" />
+      <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" layoutX="100.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+      <Label layoutX="90.0" layoutY="220.0" text="Copyright@ 2017" AnchorPane.bottomAnchor="85.0" />
+      <Label layoutX="76.0" layoutY="167.0" styleClass="label-bright" text="Fluid Dynamics Tools" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="76.0" />
+   </children>
+</AnchorPane>

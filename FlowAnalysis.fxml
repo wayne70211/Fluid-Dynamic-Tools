@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address.view.FlowAnalysisControl">
+   <children>
+      <SplitPane dividerPositions="0.49666666666666665" layoutX="34.0" layoutY="53.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="467.0" prefWidth="500.0" styleClass="background">
+               <children>
+                  <Label layoutX="19.0" layoutY="23.0" styleClass="label-header" text="Flow Analysis" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                  <GridPane hgap="5.0" layoutX="65.0" layoutY="178.0" vgap="5.0" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="120.0">
+                     <children>
+                        <Label styleClass="label-bright" text="Boundary" GridPane.rowIndex="1" />
+                        <ChoiceBox fx:id="FlowType" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <styleClass>
+                              <String fx:value="label-bright" />
+                              <String fx:value="background" />
+                           </styleClass>
+                        </ChoiceBox>
+                        <Label styleClass="label-bright" text="Reylonds Number" GridPane.rowIndex="2" />
+                        <Label fx:id="Re" styleClass="label-bright" text="Label" translateX="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label styleClass="label-bright" text="Flow Type" GridPane.rowIndex="3" />
+                        <Label fx:id="Viscid" styleClass="label-bright" text="Label" translateX="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label styleClass="label-bright" text="Name" />
+                        <Label fx:id="Name" styleClass="label-bright" text="Label" translateX="10.0" GridPane.columnIndex="1" />
+                        <Label styleClass="label-bright" text="Transition Range" GridPane.rowIndex="4" />
+                        <Label fx:id="TranspointFrom" styleClass="label-bright" text="Label" translateX="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="TranspointTo" styleClass="label-bright" text="Label" translateX="10.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="141.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="164.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <HBox layoutX="87.0" layoutY="391.0" spacing="30.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="100.0">
+                     <children>
+                        <Button defaultButton="true" layoutX="46.0" layoutY="430.0" mnemonicParsing="false" onAction="#handleAnalysis" text="Analysis" />
+                        <Button layoutX="222.0" layoutY="432.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background">
+               <children>
+                  <Rectangle fx:id="Laminar" height="100.0" layoutX="50.0" layoutY="120.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="41.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#3457a8" />
+                              <Stop color="#867527" offset="0.7064813318247938" />
+                              <Stop color="#e07b28" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Rectangle fx:id="Transmit" height="100.0" layoutX="91.0" layoutY="120.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="67.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#e07b28" />
+                              <Stop color="#d05f27" offset="0.5280426701147566" />
+                              <Stop color="#de2828" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Rectangle fx:id="Turbulent" height="100.0" layoutX="159.0" layoutY="120.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="67.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#de2828" />
+                              <Stop color="#da178f" offset="0.31614675933408737" />
+                              <Stop color="#f27cd4" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Rectangle fill="#8a8a8a" height="17.0" layoutX="49.0" layoutY="112.0" stroke="#ffffff00" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="350.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="110.0" />
+                  <Rectangle fx:id="Initial" fill="#ffffff00" height="100.0" layoutX="50.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="120.0" />
+                  <Rectangle fill="#8a8a8a" height="17.0" layoutX="50.0" layoutY="220.0" stroke="#ffffff00" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="350.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="220.0" />
+                  <HBox layoutX="99.0" layoutY="310.0" spacing="30.0" AnchorPane.leftAnchor="100.0">
+                     <children>
+                        <Label layoutX="99.0" layoutY="310.0" styleClass="label-bright" text="Scale" />
+                        <Slider fx:id="zoom" layoutX="171.0" layoutY="311.0" onMouseClicked="#setanimation" onMouseDragged="#setanimation" />
+                        <Label fx:id="Scale" text="Label" />
+                     </children>
+                  </HBox>
+                  <Text fx:id="from" fill="#10e809" layoutX="285.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From" />
+                  <Text fx:id="to" fill="#e40d0d" layoutX="192.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To" />
+                  <Line endX="350.0" layoutX="50.0" layoutY="250.0" stroke="WHITE" styleClass="label-bright" />
+                  <Text fx:id="totallength" fill="WHITE" layoutX="350.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Line fx:id="TransLineFrom" endY="150.0" fill="#41d045" layoutX="300.0" layoutY="100.0" stroke="#12e812" strokeWidth="3.0" />
+                  <Line fx:id="TransLineTo" endY="150.0" fill="#dd2828" layoutX="200.0" layoutY="100.0" stroke="#e51212" strokeWidth="3.0" />
+                  <Button layoutX="201.0" layoutY="391.0" mnemonicParsing="false" onAction="#run" text="Run" AnchorPane.bottomAnchor="75.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1d1d1d" height="142.0" layoutX="400.0" layoutY="110.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="49.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

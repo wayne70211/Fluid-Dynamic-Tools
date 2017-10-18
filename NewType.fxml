@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address.view.NewTypeControl">
+   <children>
+      <GridPane gridLinesVisible="true" hgap="4.0" layoutX="100.0" layoutY="104.0" styleClass="label-bright" vgap="5.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="80.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.04306030273438" minWidth="10.0" prefWidth="204.96661376953125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.58349609375" minWidth="10.0" prefWidth="192.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.58349609375" minWidth="10.0" prefWidth="82.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label styleClass="label-bright" text="Type" />
+            <Label styleClass="label-bright" text="Velocity" GridPane.rowIndex="1" />
+            <Label styleClass="label-bright" text="Tempature" GridPane.rowIndex="2" />
+            <Label styleClass="label-bright" text="Altitude" GridPane.rowIndex="3" />
+            <Label styleClass="label-bright" text="Reference Length" GridPane.rowIndex="4" />
+            <Label styleClass="label-bright" text="Density" GridPane.rowIndex="5" />
+            <Label styleClass="label-bright" text="Viscosity" GridPane.rowIndex="6" />
+            <TextField fx:id="typeField" GridPane.columnIndex="1" />
+            <TextField fx:id="velocityField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tempartureField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="altitudeField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="lengthField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="densityField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="viscosityField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="m/s" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="C" text="C" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="D" text="kg/m" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label text="Pa*s" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <HBox layoutX="251.0" layoutY="437.0" spacing="25.0" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="60.0">
+         <children>
+            <Button defaultButton="true" layoutX="251.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleOk" text="OK" />
+            <Button cancelButton="true" layoutX="370.0" layoutY="439.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
